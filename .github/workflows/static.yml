@@ -1,43 +1,139 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UNRANKED.NET</title>
 
-on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
+<style>
+body {
+    background-color: black;
+    color: lime;
+    font-family: "Courier New", monospace;
+    margin: 40px;
+}
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+h1 {
+    text-align: center;
+    text-shadow: 0 0 10px lime;
+}
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+.warning {
+    border: 2px solid red;
+    padding: 15px;
+    margin-bottom: 20px;
+    color: red;
+}
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+a {
+    color: cyan;
+}
 
-jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload entire repository
-          path: '.'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v5
+a:hover {
+    color: white;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.counter {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.blink {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+pre {
+    color: yellow;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="warning">
+⚠ WARNING ⚠<br>
+Diese Seite wurde vom Ministry for Wicked Problems als
+"nicht vertrauenswürdig" eingestuft.
+</div>
+
+<h1 class="blink">UNRANKED.NET</h1>
+
+<p align="center">
+<b>Du bist mehr als dein Score.</b>
+</p>
+
+<hr>
+
+<pre>
+      /\_/\\
+     ( o.o )
+      > ^ <
+</pre>
+
+<p>
+Willkommen im Widerstand.
+</p>
+
+<p>
+Seit 2032 bewertet das MWP jede kreative Arbeit.
+Ideen werden registriert.
+Menschen werden gerankt.
+Kreativität wird gehandelt.
+</p>
+
+<p>
+Wir glauben:
+</p>
+
+<ul>
+<li>Kunst ist keine Aktie.</li>
+<li>Kreativität ist nicht messbar.</li>
+<li>Menschen sind mehr als Daten.</li>
+</ul>
+
+<hr>
+
+<h2>Manifest</h2>
+
+<p>
+Wir verweigern die Registrierung.
+Wir verweigern die Bewertung.
+Wir verweigern die Optimierung.
+</p>
+
+<p>
+Wir erschaffen für Menschen.
+Nicht für Algorithmen.
+</p>
+
+<hr>
+
+<h2>Links</h2>
+
+<ul>
+<li><a href="#">Manifest herunterladen</a></li>
+<li><a href="#">Lokale Treffpunkte</a></li>
+<li><a href="#">Anonymes Forum</a></li>
+</ul>
+
+<div class="counter">
+Besucher Nr. 000042
+</div>
+
+</div>
+
+</body>
+</html>
